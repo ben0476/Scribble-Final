@@ -80,7 +80,9 @@ void CScribblenewView::OnDraw(CDC* pDC)
 	CBitmap *pOldBi = MemDC.SelectObject(&bmpCanvas);
     CImage image;
 	CString getpath = GetDocument()->GetFilePath();
-	if(GetDocument()->IfUseImage())
+	BOOL PicOrColor = FALSE;
+	PicOrColor  = GetDocument()->IfUseImage();
+	if(PicOrColor == TRUE)
 	{
 		LPCSTR FilePath = (LPCSTR)(LPCTSTR)getpath;
 		image.Load ((LPCTSTR)FilePath);
