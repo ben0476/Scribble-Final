@@ -78,11 +78,8 @@ BOOL CScribblenewDoc::OnNewDocument()
 		InitDocument();
 		return TRUE;
 	}
-	else
-	{
-      m_bThickPen = FALSE;
-	}
-	return TRUE;
+	
+	return FALSE;
 }
 
 
