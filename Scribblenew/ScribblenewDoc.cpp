@@ -188,6 +188,7 @@ BOOL CScribblenewDoc::OnOpenDocument(LPCTSTR lpszPathName)
 {
 	if (!CDocument::OnOpenDocument(lpszPathName))
 		return FALSE;
+	m_IfUseImage = m_FilePath.IsEmpty() ? FALSE : TRUE;
 	InitDocument(); 
 	return TRUE;
 }
