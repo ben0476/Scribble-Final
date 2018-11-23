@@ -87,7 +87,7 @@ void CScribblenewView::OnDraw(CDC* pDC)
 		LPCSTR FilePath = (LPCSTR)(LPCTSTR)getpath;
 		image.Load ((LPCTSTR)FilePath);
 		
-		CBitmap *pOldBi = MemDC.SelectObject(&bmpCanvas);
+		//CBitmap *pOldBi = MemDC.SelectObject(&bmpCanvas);
 		//filled default color to all panel
 		MemDC.FillSolidRect(0, 0, rectClip.right, rectClip.bottom, RGB(255, 255, 255));
 		image.Draw(MemDC, 0, 0); 
@@ -95,7 +95,7 @@ void CScribblenewView::OnDraw(CDC* pDC)
 	else
 	{
 		
-		CBitmap *pOldBi = MemDC.SelectObject(&bmpCanvas);
+		//CBitmap *pOldBi = MemDC.SelectObject(&bmpCanvas);
 		//filled default color to all panel
 		MemDC.FillSolidRect(0, 0, rectClip.right, rectClip.bottom, RGB(255, 255, 255));
 		//filled color we pick for canvas
